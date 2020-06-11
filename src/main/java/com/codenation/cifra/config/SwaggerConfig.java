@@ -30,9 +30,9 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .title("API para o desafio da Codenation")
                 .description("\"Desafio da Cifra de Cesar\"")
                 .version("1.0.0")
-    .license("Apache License Version 2.0")
-    .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-    .build();
+                .license("Apache License Version 2.0")
+                .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
+                .build();
     }
 
     @Override
@@ -41,6 +41,6 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .addResourceLocations("classpath:/META-INF/resources/");
 
         registry.addResourceHandler("/webjars/**")
-         .addResourceLocations("classpath:/META-INF/resources/webjars/");
-         }
-         }
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+}
