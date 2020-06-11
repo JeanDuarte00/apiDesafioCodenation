@@ -27,6 +27,7 @@ public class CipherController {
     @PostMapping(value="/decode", produces= MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "Retorna a string codificada")
     public ResponseEntity<?> decode (@RequestBody CipherModel cipher) {
+        System.out.println("CIPHER_IN: " + cipher);
         String res = new CipherService(cipher.getChangeFactor()).decode(cipher.getMessage());
         System.out.println("RES: " + res);
         return new ResponseEntity<>(new Response(res), HttpStatus.OK);
